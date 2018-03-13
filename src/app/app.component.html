@@ -1,0 +1,44 @@
+{{mostrarMenu}}
+<nav *ngIf="mostrarMenu" >
+    <div class="nav-wrapper">
+        <a routerLink="" class="brand-logo right">Rotas Ng2</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li routerLinkActive="active">
+                <a routerLink="/login"> Login</a>
+            </li>
+            <li routerLinkActive="active">
+                <a routerLink="/cursos" [queryParams]="{pagina:idcurso.value}" >Cursos</a>
+            </li>
+
+            <li routerLinkActive="active">
+                <a [routerLink]="['cursos',idcurso.value]">Cursos com id</a>
+            </li>
+
+            <li routerLinkActive="active">
+                <a [routerLink]="['endereco']">endereco</a>
+            </li>
+
+            <li routerLinkActive="active">
+                <a [routerLink]="['viewchild']">acessando o dom</a>
+            </li>
+
+            <li routerLinkActive="active">
+                <a [routerLink]="['aluno']">Aluno</a>
+            </li>
+
+            <li routerLinkActive="active">
+                <a [routerLink]="['aluno',1]">Aluno detalhe</a>
+            </li>
+            
+            <li routerLinkActive="active">
+                <a [routerLink]="['aluno',1,'editar']">Aluno editar</a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <p>Entre com o id</p>
+    <input #idcurso>
+</div>
+<router-outlet></router-outlet>

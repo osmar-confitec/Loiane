@@ -1,0 +1,12 @@
+<p>
+  cursos works!
+</p>
+
+<curso-loiane-enderecos></curso-loiane-enderecos> 
+
+<div class="collection">
+  <a *ngFor="let cur of cursoslist" [routerLink]="['curso',cur.codigoCurso]" class="collection-item">{{cur.nomeCurso}}</a>
+ 
+</div>
+
+{{paginaQuery}}
