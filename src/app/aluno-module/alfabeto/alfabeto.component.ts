@@ -7,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlfabetoComponent implements OnInit {
 
+
+  Alfabeto:string[] = ['A','B','C','D','E','F','G','H'];
+  letraSelecionada:string = '' 
+
   constructor() { }
+
+  EnviarNotificacao(){
+
+
+  }
 
   ngOnInit() {
   }

@@ -10,18 +10,23 @@ import { AlunoGuardDeactiveService } from './guards/aluno-guard-deactive.service
 import { AlunoServiceModelService } from './aluno-service/aluno-service-model.service';
 import { AlunoGuardResolvedService } from './guards/aluno-guard-resolved.service';
 import { AlfabetoComponent } from './alfabeto/alfabeto.component';
+import { ServiceBroadcastService } from './aluno-service/service-broadcast.service';
+import { PrimeiroNomeComponent } from './primeiro-nome/primeiro-nome.component';
+import { SegundoNomeComponent } from './segundo-nome/segundo-nome.component';
 
 @NgModule({
   imports: [
     CommonModule,
     AlunoRoutingModule
   ],
-  declarations: [AlunoComponent, AlunoFormComponent, AlunoDetalheComponent, AlfabetoComponent],
+  declarations: [AlunoComponent, AlunoFormComponent, AlunoDetalheComponent,
+    AlfabetoComponent, PrimeiroNomeComponent, SegundoNomeComponent],
   exports:[AlunoComponent, AlunoFormComponent, AlunoDetalheComponent],
   providers:[AlunoGuardService
     ,AlunoGuardResolvedService
     ,AlunoGuardChildService
     ,AlunoGuardDeactiveService
-    ,AlunoServiceModelService]
-})
+    ,AlunoServiceModelService
+    ,ServiceBroadcastService]
+  })
 export class AlunoModuleModule { }
