@@ -9,13 +9,14 @@ import { AlunoGuardChildService } from './guards/aluno-guard-child.service';
 import { AlunoGuardDeactiveService } from './guards/aluno-guard-deactive.service';
 import { AlunoServiceModelService } from './aluno-service/aluno-service-model.service';
 import { AlunoGuardResolvedService } from './guards/aluno-guard-resolved.service';
+import { AlfabetoComponent } from './alfabeto/alfabeto.component';
 
 @NgModule({
   imports: [
     CommonModule,
     AlunoRoutingModule
   ],
-  declarations: [AlunoComponent, AlunoFormComponent, AlunoDetalheComponent],
+  declarations: [AlunoComponent, AlunoFormComponent, AlunoDetalheComponent, AlfabetoComponent],
   exports:[AlunoComponent, AlunoFormComponent, AlunoDetalheComponent],
   providers:[AlunoGuardService
     ,AlunoGuardResolvedService
