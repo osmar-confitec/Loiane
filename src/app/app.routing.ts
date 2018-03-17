@@ -12,7 +12,12 @@ const APP_ROUTES : Routes = [
         { path :'viewchild'  , component:ViewchildComponent },
         { path :'404Curse'  , component:CursoNaoEncontradoComponent
          },
-
+         { path: 'alunos',
+         loadChildren: 'app/alunos-module/alunos-module#AlunoModuleModule'
+        // canActivate: [AuthGuard],
+         //canActivateChild: [AlunosGuard]
+         //canLoad: [AuthGuard]
+     },
         { path :'login'  , component:LoginComponent },
         { path :''  , component:HomeComponent , canActivate:[AuthGuardService] },
         { path :'endereco'  ,  component:EnderecosComponent , canActivate:[AuthGuardService] },

@@ -10,7 +10,7 @@ import { AlunoGuardResolvedService } from './guards/aluno-guard-resolved.service
 
 const alunosRoutes = [
 
-        {path:'aluno' , component:AlunoComponent,
+        {path:'' , component:AlunoComponent,
          canActivate:[AlunoGuardService],
          canDeactivate:[AlunoGuardDeactiveService],
          canActivateChild:[AlunoGuardChildService],

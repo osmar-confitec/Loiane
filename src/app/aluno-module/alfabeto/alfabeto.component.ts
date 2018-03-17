@@ -14,8 +14,7 @@ export class AlfabetoComponent implements OnInit {
   constructor() { }
 
   EnviarNotificacao(){
-
-
+    
   }
 
   ngOnInit() {

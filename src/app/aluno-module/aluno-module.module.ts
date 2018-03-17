@@ -13,15 +13,19 @@ import { AlfabetoComponent } from './alfabeto/alfabeto.component';
 import { ServiceBroadcastService } from './aluno-service/service-broadcast.service';
 import { PrimeiroNomeComponent } from './primeiro-nome/primeiro-nome.component';
 import { SegundoNomeComponent } from './segundo-nome/segundo-nome.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    AlunoRoutingModule
+    AlunoRoutingModule,
+    BrowserModule,
+    FormsModule
   ],
   declarations: [AlunoComponent, AlunoFormComponent, AlunoDetalheComponent,
     AlfabetoComponent, PrimeiroNomeComponent, SegundoNomeComponent],
-  exports:[AlunoComponent, AlunoFormComponent, AlunoDetalheComponent],
+  exports:[AlunoComponent, AlunoFormComponent, AlunoDetalheComponent,AlfabetoComponent],
   providers:[AlunoGuardService
     ,AlunoGuardResolvedService
     ,AlunoGuardChildService
